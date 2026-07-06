@@ -26,11 +26,13 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-20">
+    <section id="contact" className="py-28">
       <div className="mx-auto grid max-w-6xl gap-14 px-6 md:grid-cols-[1fr_1.2fr]">
         <div>
-          <p className="mono-tag mb-3 text-[11px] text-[var(--amber)]">Contact</p>
-          <h2 className="text-3xl font-semibold leading-tight md:text-4xl">Demander un devis.</h2>
+          <p className="mono-tag mb-3 text-[11px] text-[var(--cyan)]">Contact</p>
+          <h2 className="text-4xl md:text-5xl">
+            Demander <span className="accent-serif gradient-text">un devis.</span>
+          </h2>
           <p className="mt-5 max-w-sm text-[14px] leading-relaxed text-[var(--text-dim)]">
             Chaque projet est différent — décrivez-moi le vôtre, je vous réponds avec un devis sous 48h.
           </p>
@@ -38,13 +40,13 @@ export default function Contact() {
           <div className="mt-8 flex flex-col gap-3">
             <a
               href={`mailto:${CONTACT_EMAIL}`}
-              className="mono-tag text-[12px] text-[var(--text)] transition-colors hover:text-[var(--mint)]"
+              className="mono text-[13px] text-[var(--text)] transition-colors hover:text-[var(--cyan)]"
             >
               {CONTACT_EMAIL}
             </a>
             <a
               href={`tel:${CONTACT_PHONE.replace(/\s/g, "")}`}
-              className="mono-tag text-[12px] text-[var(--text)] transition-colors hover:text-[var(--mint)]"
+              className="mono text-[13px] text-[var(--text)] transition-colors hover:text-[var(--cyan)]"
             >
               {CONTACT_PHONE}
             </a>
@@ -65,8 +67,8 @@ export default function Contact() {
             <textarea
               name="message"
               rows={4}
-              placeholder="Votre établissement, ce que vous cherchez à résoudre..."
-              className="rounded-sm border border-[var(--panel-line)] bg-[var(--ink)] px-3 py-2.5 text-[14px] text-[var(--text)] placeholder:text-[#565f68] focus:border-[var(--amber)] focus:outline-none"
+              placeholder="Votre projet, ce que vous cherchez à résoudre..."
+              className="rounded-lg border border-[var(--line)] bg-[var(--bg)] px-3 py-2.5 text-[14px] text-[var(--text)] placeholder:text-[var(--text-faint)] focus:border-[var(--violet-soft)] focus:outline-none"
             />
           </label>
 
@@ -74,7 +76,7 @@ export default function Contact() {
             Envoyer la demande
           </button>
           {sent && (
-            <p className="mono-tag text-[11px] text-[var(--mint)]">
+            <p className="mono-tag text-[11px] text-[var(--cyan)]">
               Votre messagerie s&apos;est ouverte — il ne reste plus qu&apos;à envoyer.
             </p>
           )}
@@ -105,7 +107,7 @@ function Field({
         name={name}
         type={type}
         required={required}
-        className="rounded-sm border border-[var(--panel-line)] bg-[var(--ink)] px-3 py-2.5 text-[14px] text-[var(--text)] focus:border-[var(--amber)] focus:outline-none"
+        className="rounded-lg border border-[var(--line)] bg-[var(--bg)] px-3 py-2.5 text-[14px] text-[var(--text)] focus:border-[var(--violet-soft)] focus:outline-none"
       />
     </label>
   );
