@@ -8,8 +8,8 @@ const WORDPRESS_LINES = [
 
 const INCLUDED = [
   "Code sur mesure — aucune licence, aucun plugin",
-  "Hébergement facturé à prix coûtant, sans marge cachée",
-  "Sauvegardes automatiques, tous les jours",
+  "Hébergement clé en main : serveur, monitoring et support inclus",
+  "Sauvegardes dégressives : par heure la 1ʳᵉ semaine, puis par jour, semaine, mois",
   "SSL, mises à jour et maintenance inclus",
 ];
 
@@ -23,8 +23,8 @@ export default function Hosting() {
         </h2>
         <p className="mt-5 max-w-lg text-[15px] leading-relaxed text-[var(--text-dim)]">
           Pas de WordPress, pas de thème à licence, pas de plugin qui se facture chaque mois. Le
-          sur-mesure a un coût de départ, mais aucun péage ensuite — et l&apos;hébergement est inclus,
-          facturé au prix réel du serveur.
+          sur-mesure a un coût de départ, mais aucun péage ensuite — et l&apos;hébergement, sauvegardes
+          et support compris, reste nettement sous le coût d&apos;un site à base de plugins.
         </p>
 
         <div className="mt-14 grid gap-6 md:grid-cols-2">
@@ -68,7 +68,7 @@ export default function Hosting() {
             </ul>
             <div className="mt-5 flex items-center justify-between border-t border-[var(--line)] pt-4">
               <span className="text-[13px] text-[var(--text-dim)]">Hébergement</span>
-              <span className="mono-tag text-[13px] text-[var(--cyan)]">quelques €/mois</span>
+              <span className="mono-tag text-[13px] text-[var(--cyan)]">à partir de 25 €/mois</span>
             </div>
             <a href="#contact" className="btn btn--primary mt-6 w-full">
               Demander un devis

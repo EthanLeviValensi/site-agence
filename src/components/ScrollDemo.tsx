@@ -33,7 +33,7 @@ export default function ScrollDemo({
   const Visual = stages[active].Visual;
 
   return (
-    <section id={id} ref={ref} style={{ height: `${stages.length * 100}vh` }} className="relative">
+    <section id={id} ref={ref} style={{ height: `${stages.length * 60}vh` }} className="relative">
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         <div className="mx-auto grid w-full max-w-6xl gap-16 px-6 md:grid-cols-2 md:items-center">
           <div>
