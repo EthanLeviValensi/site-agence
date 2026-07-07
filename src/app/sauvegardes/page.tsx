@@ -2,19 +2,13 @@ import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import { LegalSection } from "@/components/LegalPage";
+import BackupTiers from "@/components/BackupTiers";
 
 export const metadata: Metadata = {
   title: "Nos sauvegardes — Synergy Solutions",
   description:
     "Comment vos données sont sauvegardées : politique de rétention par heure, jour, semaine et mois, stockée hors serveur.",
 };
-
-const TIERS = [
-  { period: "1ʳᵉ semaine", freq: "Toutes les heures", detail: "jusqu'à 168 versions" },
-  { period: "Jusqu'à 1 mois", freq: "Tous les jours", detail: "une version par jour conservée" },
-  { period: "Jusqu'à 6 mois", freq: "Toutes les semaines", detail: "une version par semaine conservée" },
-  { period: "Jusqu'à 2 ans", freq: "Tous les mois", detail: "une version par mois conservée" },
-];
 
 export default function Sauvegardes() {
   return (
@@ -34,14 +28,11 @@ export default function Sauvegardes() {
             an.
           </p>
 
-          <div className="mt-12 grid gap-3 sm:grid-cols-2">
-            {TIERS.map((t) => (
-              <div key={t.period} className="card p-5">
-                <span className="mono-tag text-[10px] text-[var(--text-faint)]">{t.period}</span>
-                <p className="mt-2 text-[17px]">{t.freq}</p>
-                <p className="mt-1 text-[13px] text-[var(--text-dim)]">{t.detail}</p>
-              </div>
-            ))}
+          <div className="mt-12">
+            <BackupTiers />
+            <p className="mono-tag mt-3 text-[10px] text-[var(--text-faint)]">
+              ✦ le rythme du pouls de chaque carte suit sa vraie fréquence de sauvegarde
+            </p>
           </div>
 
           <div className="mt-14 space-y-9">

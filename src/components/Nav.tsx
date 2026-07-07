@@ -24,6 +24,13 @@ export default function Nav() {
           <a href="/#hebergement" className="text-[13px] text-[var(--text-dim)] transition-colors hover:text-[var(--text)]">
             Hébergement
           </a>
+          <a
+            href="/sauvegardes"
+            className="flex items-center gap-1.5 text-[13px] text-[var(--text-dim)] transition-colors hover:text-[var(--text)]"
+          >
+            <span className="h-1.5 w-1.5 rounded-full" style={{ background: "var(--cyan)" }} />
+            Sauvegardes
+          </a>
         </nav>
 
         <a href="/#contact" className="btn btn--primary !py-2 !px-4 text-[13px]">
