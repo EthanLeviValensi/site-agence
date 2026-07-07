@@ -28,10 +28,10 @@ export default function Hero() {
             et qui coûte moins cher à faire vivre.
           </p>
           <div className="mt-9 flex flex-wrap gap-3">
-            <a href="#contact" className="btn btn--primary">
+            <a href="/#contact" className="btn btn--primary">
               Demander un devis
             </a>
-            <a href="#kds" className="btn btn--ghost">
+            <a href="/#kds" className="btn btn--ghost">
               Voir une démo
             </a>
           </div>

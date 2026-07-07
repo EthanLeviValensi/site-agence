@@ -2,7 +2,7 @@ export default function Nav() {
   return (
     <header className="fixed inset-x-4 top-4 z-50 md:inset-x-8">
       <div className="mx-auto flex max-w-6xl items-center justify-between rounded-full border border-[var(--line)] bg-[var(--bg)]/70 px-5 py-3 backdrop-blur-xl">
-        <a href="#top" className="flex items-center gap-2">
+        <a href="/#top" className="flex items-center gap-2">
           <span
             aria-hidden
             className="h-2 w-2 rounded-full"
@@ -12,21 +12,21 @@ export default function Nav() {
         </a>
 
         <nav className="hidden items-center gap-7 lg:flex">
-          <a href="#services" className="text-[13px] text-[var(--text-dim)] transition-colors hover:text-[var(--text)]">
+          <a href="/#services" className="text-[13px] text-[var(--text-dim)] transition-colors hover:text-[var(--text)]">
             Services
           </a>
-          <a href="#kds" className="text-[13px] text-[var(--text-dim)] transition-colors hover:text-[var(--text)]">
+          <a href="/#kds" className="text-[13px] text-[var(--text-dim)] transition-colors hover:text-[var(--text)]">
             KDS
           </a>
-          <a href="#ecommerce" className="text-[13px] text-[var(--text-dim)] transition-colors hover:text-[var(--text)]">
+          <a href="/#ecommerce" className="text-[13px] text-[var(--text-dim)] transition-colors hover:text-[var(--text)]">
             E-commerce
           </a>
-          <a href="#hebergement" className="text-[13px] text-[var(--text-dim)] transition-colors hover:text-[var(--text)]">
+          <a href="/#hebergement" className="text-[13px] text-[var(--text-dim)] transition-colors hover:text-[var(--text)]">
             Hébergement
           </a>
         </nav>
 
-        <a href="#contact" className="btn btn--primary !py-2 !px-4 text-[13px]">
+        <a href="/#contact" className="btn btn--primary !py-2 !px-4 text-[13px]">
           Demander un devis
         </a>
       </div>

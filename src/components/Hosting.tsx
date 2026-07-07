@@ -7,10 +7,13 @@ const WORDPRESS_LINES = [
 ];
 
 const INCLUDED = [
-  "Code sur mesure — aucune licence, aucun plugin",
-  "Hébergement clé en main : serveur, monitoring et support inclus",
-  "Sauvegardes dégressives : par heure la 1ʳᵉ semaine, puis par jour, semaine, mois",
-  "SSL, mises à jour et maintenance inclus",
+  { text: "Code sur mesure — aucune licence, aucun plugin" },
+  { text: "Hébergement clé en main : serveur, monitoring et support inclus" },
+  {
+    text: "Sauvegardes dégressives : par heure la 1ʳᵉ semaine, puis par jour, semaine, mois",
+    href: "/sauvegardes",
+  },
+  { text: "SSL, mises à jour et maintenance inclus" },
 ];
 
 export default function Hosting() {
@@ -59,10 +62,23 @@ export default function Hosting() {
             <span className="mono-tag text-[10px] text-[var(--cyan)]">Synergy Solutions</span>
             <h3 className="mt-2 text-xl">Un logiciel sur mesure</h3>
             <ul className="mt-5 space-y-3 border-t border-[var(--line)] pt-5">
-              {INCLUDED.map((line) => (
-                <li key={line} className="flex items-start gap-2.5 text-[13px] text-[var(--text-dim)]">
+              {INCLUDED.map((item) => (
+                <li key={item.text} className="flex items-start gap-2.5 text-[13px] text-[var(--text-dim)]">
                   <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--cyan)]" />
-                  {line}
+                  <span>
+                    {item.text}
+                    {item.href && (
+                      <>
+                        {" "}
+                        <a
+                          href={item.href}
+                          className="text-[var(--cyan)] underline decoration-dotted underline-offset-2 hover:text-[var(--text)]"
+                        >
+                          en savoir plus
+                        </a>
+                      </>
+                    )}
+                  </span>
                 </li>
               ))}
             </ul>
@@ -70,7 +86,7 @@ export default function Hosting() {
               <span className="text-[13px] text-[var(--text-dim)]">Hébergement</span>
               <span className="mono-tag text-[13px] text-[var(--cyan)]">à partir de 25 €/mois</span>
             </div>
-            <a href="#contact" className="btn btn--primary mt-6 w-full">
+            <a href="/#contact" className="btn btn--primary mt-6 w-full">
               Demander un devis
             </a>
           </div>

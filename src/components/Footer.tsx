@@ -8,6 +8,9 @@ export default function Footer() {
           <p className="mono-tag">synergysolutions.fr · © {year}</p>
         </div>
         <nav className="flex flex-wrap gap-x-5 gap-y-2 text-[11px] text-[var(--text-faint)]">
+          <a href="/sauvegardes" className="transition-colors hover:text-[var(--text)]">
+            Sauvegardes
+          </a>
           <a href="/mentions-legales" className="transition-colors hover:text-[var(--text)]">
             Mentions légales
           </a>
