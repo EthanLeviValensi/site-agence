@@ -96,8 +96,8 @@ export default function ScratchTicket() {
           <p className="mt-2 text-[14px] leading-relaxed text-[#2a2620]">
             Puisque vous êtes arrivé·e jusque-là, n&apos;hésitez pas à mentionner{" "}
             <span className="font-semibold">LoveSynergy</span> pour bénéficier de{" "}
-            <span className="font-semibold">10&nbsp;% de réduction</span> sur le premier mois
-            d&apos;hébergement.
+            <span className="font-semibold">10&nbsp;% de réduction</span>{" "}
+            sur le premier mois d&apos;hébergement.
           </p>
         </div>
 
