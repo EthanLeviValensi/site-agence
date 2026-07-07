@@ -5,11 +5,13 @@ import { motion, useReducedMotion } from "framer-motion";
 const SIZE = 300;
 const CENTER = 150;
 
+// Ratios calqués sur le vrai calendrier : 24h/jour, 7j/semaine, 4sem/mois.
+// Un tour du cercle "jour" dure exactement 24 tours du cercle "heure", etc.
 const RINGS = [
-  { radius: 45, duration: 3, color: "#2ee6d6", label: "Toutes les heures", period: "1ʳᵉ semaine" },
-  { radius: 78, duration: 5.5, color: "#4dbde4", label: "Tous les jours", period: "Jusqu'à 1 mois" },
-  { radius: 111, duration: 9, color: "#6b95f1", label: "Toutes les semaines", period: "Jusqu'à 6 mois" },
-  { radius: 138, duration: 14, color: "#8b6bff", label: "Tous les mois", period: "Jusqu'à 2 ans" },
+  { radius: 45, duration: 1, color: "#2ee6d6", label: "Toutes les heures", period: "1ʳᵉ semaine" },
+  { radius: 78, duration: 24, color: "#4dbde4", label: "Tous les jours", period: "Jusqu'à 1 mois" },
+  { radius: 111, duration: 168, color: "#6b95f1", label: "Toutes les semaines", period: "Jusqu'à 6 mois" },
+  { radius: 138, duration: 672, color: "#8b6bff", label: "Tous les mois", period: "Jusqu'à 2 ans" },
 ];
 
 export default function BackupOrbits() {
