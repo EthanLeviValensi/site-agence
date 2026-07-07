@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import { LegalSection } from "@/components/LegalPage";
-import BackupTiers from "@/components/BackupTiers";
+import BackupOrbits from "@/components/BackupOrbits";
 
 export const metadata: Metadata = {
   title: "Nos sauvegardes — Synergy Solutions",
@@ -28,10 +28,10 @@ export default function Sauvegardes() {
             an.
           </p>
 
-          <div className="mt-12">
-            <BackupTiers />
-            <p className="mono-tag mt-3 text-[10px] text-[var(--text-faint)]">
-              ✦ le rythme du pouls de chaque carte suit sa vraie fréquence de sauvegarde
+          <div className="mt-14">
+            <BackupOrbits />
+            <p className="mono-tag mt-6 text-[10px] text-[var(--text-faint)]">
+              ✦ chaque point orbite à la vitesse réelle de sa fréquence de sauvegarde
             </p>
           </div>
 
