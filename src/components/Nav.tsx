@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 const LINKS = [
   { href: "/#services", label: "Services" },
@@ -17,11 +18,14 @@ export default function Nav() {
     <header className="fixed inset-x-4 top-4 z-50 md:inset-x-8">
       <div className="mx-auto max-w-6xl">
         <div className="flex items-center justify-between rounded-full border border-[var(--line)] bg-[var(--bg)]/70 px-5 py-3 backdrop-blur-xl">
-          <a href="/#top" className="flex items-center gap-2" onClick={() => setOpen(false)}>
-            <span
-              aria-hidden
-              className="h-2 w-2 shrink-0 rounded-full"
-              style={{ background: "var(--grad-signature)" }}
+          <a href="/#top" className="flex items-center gap-2.5" onClick={() => setOpen(false)}>
+            <Image
+              src="/logo.jpg"
+              alt="Synergy Solutions"
+              width={100}
+              height={100}
+              className="h-8 w-8 shrink-0 rounded-lg"
+              priority
             />
             <span className="text-[15px] font-semibold tracking-tight">Synergy Solutions</span>
           </a>

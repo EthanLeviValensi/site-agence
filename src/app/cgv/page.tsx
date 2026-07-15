@@ -40,11 +40,18 @@ export default function Cgv() {
 
       <LegalSection title="Article 4 — Prix et modalités de paiement">
         <p>
-          Les prix sont exprimés en euros. Sauf mention contraire sur le devis, un acompte peut être
-          demandé à la commande, le solde étant dû à la livraison. L&apos;hébergement, lorsqu&apos;il
-          est souscrit, est facturé mensuellement à partir de 25&nbsp;€/mois, sauvegardes et
-          maintenance incluses. Tout retard de paiement peut entraîner la suspension des prestations
-          en cours.
+          Les prix sont exprimés en euros. Sauf mention contraire sur le devis, un acompte de
+          30&nbsp;% est demandé à la commande, le solde (70&nbsp;%) étant dû à la livraison.
+          L&apos;hébergement, lorsqu&apos;il est souscrit, est facturé mensuellement à partir de
+          25&nbsp;€/mois, sauvegardes et maintenance incluses.
+        </p>
+        <p>
+          <strong>En cas de non-paiement</strong> à l&apos;échéance, une pénalité de retard au taux
+          de trois fois le taux d&apos;intérêt légal est appliquée de plein droit, ainsi
+          qu&apos;une indemnité forfaitaire de recouvrement de 40&nbsp;€ (article L.441-10 du Code
+          de commerce). Passé un délai de 15 jours après mise en demeure restée sans effet, Synergy
+          Solutions se réserve le droit de suspendre l&apos;accès au service hébergé puis, si la
+          situation persiste, de résilier le contrat, sans préjudice des sommes déjà dues.
         </p>
       </LegalSection>
 
@@ -62,17 +69,57 @@ export default function Cgv() {
           contraire. Le client peut y mettre fin à tout moment avec un préavis de 30 jours. En cas de
           résiliation, une exportation complète des données et du code source est fournie au client.
         </p>
-      </LegalSection>
-
-      <LegalSection title="Article 7 — Responsabilité">
         <p>
-          Synergy Solutions s&apos;engage à mettre en œuvre tous les moyens raisonnables pour assurer
-          la qualité et la disponibilité des services fournis, sans garantie de résultat absolu
-          (notamment en cas de force majeure ou de panne imputable à un tiers).
+          <strong>Offre jeunes entreprises</strong> — les clients dont l&apos;activité a démarré
+          depuis moins d&apos;un an à la date de signature du devis bénéficient d&apos;une réduction
+          de 30&nbsp;% sur le tarif d&apos;hébergement pendant les 12 premiers mois de leur contrat,
+          sur présentation d&apos;un justificatif de création d&apos;activité (extrait Kbis, avis de
+          situation SIRENE, ou équivalent). Passé ce délai de 12 mois, l&apos;hébergement repasse au
+          tarif standard. Offre non cumulable avec une autre remise en cours.
         </p>
       </LegalSection>
 
-      <LegalSection title="Article 8 — Droit applicable">
+      <LegalSection title="Article 7 — Disponibilité du service et interruptions">
+        <p>
+          Synergy Solutions met en œuvre les moyens raisonnables pour assurer une disponibilité
+          continue des services hébergés, sans garantie de disponibilité absolue (100&nbsp;%). Des
+          interruptions ponctuelles peuvent survenir pour maintenance planifiée (annoncée à
+          l&apos;avance lorsque cela est possible), mise à jour de sécurité urgente, ou panne du
+          fournisseur d&apos;infrastructure (data center, réseau) — panne qui échappe au contrôle
+          direct de Synergy Solutions.
+        </p>
+        <p>
+          En cas d&apos;indisponibilité prolongée imputable à Synergy Solutions (plus de 24 heures
+          consécutives, hors maintenance planifiée ou cause extérieure), le client peut demander un
+          avoir proportionnel à la durée d&apos;indisponibilité sur sa prochaine facture
+          d&apos;hébergement. Synergy Solutions ne saurait être tenue responsable des conséquences
+          indirectes d&apos;une interruption (perte de chiffre d&apos;affaires, perte de clientèle,
+          préjudice commercial).
+        </p>
+      </LegalSection>
+
+      <LegalSection title="Article 8 — Cessation d'activité de Synergy Solutions">
+        <p>
+          En cas de cessation définitive de son activité, Synergy Solutions s&apos;engage à prévenir
+          chaque client actif par email au moins 60 jours à l&apos;avance. Durant ce délai, chaque
+          client reçoit une exportation complète de son code source et de ses données (base de
+          données, fichiers, dernières sauvegardes disponibles), afin de lui permettre une reprise
+          par un autre prestataire dans de bonnes conditions. Les sommes déjà versées pour des
+          périodes d&apos;hébergement non encore consommées sont remboursées au prorata.
+        </p>
+      </LegalSection>
+
+      <LegalSection title="Article 9 — Responsabilité">
+        <p>
+          Synergy Solutions s&apos;engage à mettre en œuvre tous les moyens raisonnables pour assurer
+          la qualité des prestations et services fournis, sans garantie de résultat absolu
+          (notamment en cas de force majeure ou de panne imputable à un tiers). La responsabilité de
+          Synergy Solutions ne peut être engagée au-delà du montant effectivement versé par le client
+          pour la prestation concernée.
+        </p>
+      </LegalSection>
+
+      <LegalSection title="Article 10 — Droit applicable">
         <p>
           Les présentes CGV sont soumises au droit français. Tout litige relève, à défaut de
           résolution amiable, des tribunaux compétents du ressort du siège de Synergy Solutions.

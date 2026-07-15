@@ -30,7 +30,31 @@ export default function Hosting() {
           et support compris, reste nettement sous le coût d&apos;un site à base de plugins.
         </p>
 
-        <div className="mt-14 grid gap-6 md:grid-cols-2">
+        <div className="card relative mt-10 flex flex-col items-start gap-3 overflow-hidden border-[var(--violet-soft)] p-5 sm:flex-row sm:items-center sm:justify-between">
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -left-10 -top-10 h-40 w-40 rounded-full opacity-25 blur-3xl"
+            style={{ background: "var(--grad-signature)" }}
+          />
+          <div className="relative flex items-start gap-3 sm:items-center">
+            <span className="mono-tag shrink-0 rounded-full px-2.5 py-1 text-[10px] text-[#0a0b10]" style={{ background: "var(--grad-signature)" }}>
+              Offre
+            </span>
+            <p className="text-[14px] text-[var(--text)]">
+              Votre activité a démarré il y a moins d&apos;un an ?{" "}
+              <span className="font-semibold text-[var(--cyan)]">-30 % sur l&apos;hébergement</span>{" "}
+              pendant votre première année.
+            </p>
+          </div>
+          <a
+            href="/#contact"
+            className="relative shrink-0 text-[13px] text-[var(--cyan)] underline decoration-dotted underline-offset-2 hover:text-[var(--text)]"
+          >
+            En profiter
+          </a>
+        </div>
+
+        <div className="mt-8 grid gap-6 md:grid-cols-2">
           <div className="card p-7 opacity-80">
             <span className="mono-tag text-[10px] text-[var(--text-faint)]">Le combo classique</span>
             <h3 className="mt-2 text-xl">Site WordPress + plugins</h3>
