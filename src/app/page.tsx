@@ -1,6 +1,7 @@
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
+import Creations from "@/components/Creations";
 import KdsDemo from "@/components/KdsDemo";
 import EcommerceDemo from "@/components/EcommerceDemo";
 import Hosting from "@/components/Hosting";
@@ -15,6 +16,7 @@ export default function Home() {
       <main className="relative flex-1">
         <Hero />
         <Services />
+        <Creations />
         <KdsDemo />
         <EcommerceDemo />
         <Hosting />
