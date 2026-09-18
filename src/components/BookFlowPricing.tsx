@@ -21,16 +21,29 @@ type Tier = {
   extra: string;
 };
 
+const OPTIONS = [
+  {
+    titre: "Paiement en ligne",
+    texte:
+      "Vos clientes règlent au moment de réserver, et sont remboursées automatiquement si elles annulent dans le délai que vous fixez. Les fonds arrivent sur votre compte, 1,9 % + 0,25 € par règlement — notre prix coûtant.",
+  },
+  {
+    titre: "Facturation automatique",
+    texte:
+      "Chaque encaissement devient une facture dans votre propre compte Abby ou Pennylane, sous votre numérotation. Vous connectez votre logiciel en un clic, et vous le débranchez quand vous voulez.",
+  },
+];
+
 const TIERS: Tier[] = [
   {
     code: "solo",
     name: "Solo",
     price: "29,99",
     pitch: "Vous travaillez seule, et vous voulez arrêter de gérer les rendez-vous par téléphone.",
-    reservations: "150 rendez-vous / mois",
-    sms: "75 SMS inclus",
-    fee: "2,4 % + 0,25 €",
-    extra: "0,10 € le rendez-vous · 0,12 € le SMS",
+    reservations: "300 rendez-vous / mois",
+    sms: "100 SMS de rappel",
+    fee: "1,9 % + 0,25 €",
+    extra: "0,08 € le rendez-vous · 0,09 € le SMS",
     features: [
       "Réservation en ligne sur votre site",
       "Confirmations et rappels automatiques",
@@ -44,13 +57,13 @@ const TIERS: Tier[] = [
     name: "Institut",
     price: "59,99",
     pitch: "Vous êtes plusieurs : chacune son agenda, ses prestations et ses horaires.",
-    reservations: "300 rendez-vous / mois",
-    sms: "250 SMS inclus",
-    fee: "2,4 % + 0,25 €",
-    extra: "0,10 € le rendez-vous · 0,12 € le SMS",
+    reservations: "800 rendez-vous / mois",
+    sms: "250 SMS de rappel",
+    fee: "1,9 % + 0,25 €",
+    extra: "0,08 € le rendez-vous · 0,09 € le SMS",
     features: [
       "Tout ce que contient Solo",
-      "Plusieurs praticiennes, agendas séparés",
+      "Praticiennes illimitées, agendas séparés",
       "La cliente choisit avec qui",
       "Comptes salariés et droits par personne",
       "Liste d'attente sur les créneaux pleins",
@@ -60,35 +73,33 @@ const TIERS: Tier[] = [
   {
     code: "premium",
     name: "Institut Premium",
-    price: "74,99",
+    price: "79,99",
     pitch: "Le rendez-vous est payé d'avance et la facture part toute seule dans votre comptabilité.",
-    reservations: "1 000 rendez-vous / mois",
-    sms: "300 SMS inclus",
+    reservations: "2 000 rendez-vous / mois",
+    sms: "450 SMS de rappel",
     highlight: true,
     badge: "Le plus choisi",
     fee: "1,9 % + 0,25 €",
-    extra: "0,05 € le rendez-vous · 0,10 € le SMS",
+    extra: "0,04 € le rendez-vous · 0,08 € le SMS",
     features: [
       "Tout ce que contient Institut",
-      "Paiement en ligne inclus (valeur 5 €/mois)",
-      "Facturation automatique incluse (valeur 5 €/mois)",
-      "Frais de transaction réduits",
+      "Les deux options comprises (valeur 10 €/mois)",
       "Remboursement automatique à l'annulation",
     ],
   },
   {
     code: "pro",
     name: "Pro",
-    price: "109,99",
+    price: "119,99",
     pitch: "Vous ne voulez plus compter : ni les rendez-vous, ni les dépassements.",
     reservations: "Rendez-vous illimités",
-    sms: "750 SMS inclus",
+    sms: "800 SMS de rappel",
     fee: "1,9 % + 0,25 €",
     extra: "Aucun dépassement sur les rendez-vous",
     features: [
       "Tout ce que contient Premium",
       "Rendez-vous sans limite",
-      "Le plus gros volume de SMS",
+      "Le plus gros volume de SMS de rappel",
       "Priorité sur les évolutions du logiciel",
     ],
   },
@@ -191,8 +202,7 @@ export default function BookFlowPricing() {
             >
               <p>
                 Paiement en ligne : <span className="text-[var(--text-dim)]">{tier.fee}</span> par
-                règlement encaissé
-                {tier.highlight || tier.code === "pro" ? " — tarif réduit" : ""}.
+                règlement encaissé — notre prix coûtant.
               </p>
               <p className="mt-1">Au-delà du forfait : {tier.extra}.</p>
             </div>
@@ -216,6 +226,45 @@ export default function BookFlowPricing() {
           </motion.article>
         ))}
       </div>
+
+      {/* Les deux options payantes, et le fait qu'elles cessent de l'être. */}
+      <motion.div
+        initial={reduce ? false : { opacity: 0, y: 16 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-60px" }}
+        transition={{ duration: 0.5 }}
+        className="mt-8"
+      >
+        <h3 className="text-lg">Les options</h3>
+        <p className="mt-2 max-w-xl text-[14px] leading-relaxed text-[var(--text-dim)]">
+          Deux modules qui se règlent 5 € par mois chacun sur Solo et Institut, et{" "}
+          <span className="text-[var(--cyan)]">compris sans supplément dès Premium</span>.
+        </p>
+
+        <div className="mt-5 grid gap-4 sm:grid-cols-2">
+          {OPTIONS.map((option, i) => (
+            <motion.div
+              key={option.titre}
+              initial={reduce ? false : { opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.45, delay: reduce ? 0 : i * 0.08 }}
+              whileHover={reduce ? undefined : { y: -3 }}
+              className="rounded-2xl border border-[var(--line)] p-5"
+              style={{ background: "var(--surface)" }}
+            >
+              <div className="flex items-baseline justify-between gap-3">
+                <h4 className="text-[15px]">{option.titre}</h4>
+                <span className="shrink-0 text-[13px] text-[var(--text-dim)]">5 €/mois</span>
+              </div>
+              <p className="mt-2.5 text-[14px] leading-relaxed text-[var(--text-dim)]">{option.texte}</p>
+              <p className="mono-tag mt-4 inline-block rounded-full px-2.5 py-1 text-[9px] text-[#0a0b10]" style={{ background: "var(--grad-signature)" }}>
+                Inclus en Premium et Pro
+              </p>
+            </motion.div>
+          ))}
+        </div>
+      </motion.div>
 
       <motion.div
         initial={reduce ? false : { opacity: 0 }}
@@ -242,8 +291,8 @@ export default function BookFlowPricing() {
           ))}
         </div>
         <p className="mt-5 text-[13px] leading-relaxed text-[var(--text-faint)]">
-          Options à 5 €/mois chacune sur Solo et Institut, comprises dès Premium : paiement en ligne,
-          facturation automatique. Tarifs hors taxes, TVA non applicable (article 293 B du CGI).
+          Tarifs hors taxes, TVA non applicable (article 293 B du CGI). Les SMS au-delà du forfait
+          sont facturés au segment réellement envoyé.
         </p>
       </motion.div>
     </section>
