@@ -46,8 +46,14 @@ export default function ConditionsBookFlow() {
         </p>
         <p>
           Les réservations et SMS consommés au-delà du forfait sont facturés le mois suivant, au tarif
-          unitaire de la formule : de 0,05 € à 0,10 € par réservation supplémentaire, et de 0,10 € à
-          0,12 € par SMS supplémentaire. Le détail figure sur la facture, période par période.
+          unitaire de la formule : de 0,04 € à 0,08 € par réservation supplémentaire, et de 0,08 € à
+          0,09 € par SMS supplémentaire. Le détail figure sur la facture, période par période.
+        </p>
+        <p>
+          Un SMS est décompté par <strong>segment réellement envoyé</strong> : au-delà de 160
+          caractères — ou de 70 caractères si le message contient des accents ou des emojis — un
+          message est transmis en plusieurs segments par les opérateurs, et compté comme tel.
+          L&apos;interface affiche ce découpage au moment où vous rédigez vos modèles.
         </p>
       </LegalSection>
 
@@ -59,11 +65,11 @@ export default function ConditionsBookFlow() {
           Synergy Solutions ne conserve jamais le produit des prestations.
         </p>
         <p>
-          Une commission de service est prélevée sur chaque paiement en ligne :{" "}
-          <strong>2,4 % + 0,25 €</strong> sur les formules Institut et Institut+,{" "}
-          <strong>1,9 % + 0,25 €</strong> sur les formules Premium et Pro. Cette commission couvre les
-          frais de traitement facturés par Stripe, qui varient selon le type de carte utilisé par le
-          client final.
+          Une commission de service de <strong>1,9 % + 0,25 €</strong> est prélevée sur chaque
+          paiement en ligne, quelle que soit la formule. Elle couvre les frais de traitement facturés
+          par Stripe et Stripe Connect, qui varient selon le type de carte utilisé par le client
+          final : elle correspond à notre prix de revient, et non à une marge sur le chiffre
+          d&apos;affaires de l&apos;établissement.
         </p>
         <p>
           L&apos;ouverture d&apos;un compte Stripe au nom de l&apos;établissement est un préalable
