@@ -8,6 +8,7 @@ const LINKS = [
   { href: "/creations", label: "Créations" },
   { href: "/#kds", label: "KDS" },
   { href: "/#ecommerce", label: "E-commerce" },
+  { href: "/bookflow", label: "BookFlow", dot: true },
   { href: "/#hebergement", label: "Hébergement" },
   { href: "/sauvegardes", label: "Sauvegardes", dot: true },
 ];

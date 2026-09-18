@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import BookFlowPricing from "@/components/BookFlowPricing";
 
 export const metadata: Metadata = {
   title: "BookFlow — Réservation en ligne pour instituts et restaurants",
@@ -57,6 +58,11 @@ export default function BookFlowPage() {
             plateforme où vos clientes verraient d&apos;abord vos concurrents — et il va jusqu&apos;au
             bout : de la prise de rendez-vous à la facture déposée dans votre comptabilité.
           </p>
+
+          <div className="mt-7 flex flex-wrap gap-3">
+            <a href="#formules" className="btn btn--primary">Voir les formules</a>
+            <a href="/#contact" className="btn btn--ghost">Demander une démonstration</a>
+          </div>
 
           {/* Signature de la page : la vie d'un rendez-vous, de bout en bout. */}
           <ol className="mt-16 border-t border-[var(--line)]">
@@ -115,6 +121,8 @@ export default function BookFlowPage() {
                 clientèle.
               </p>
             </section>
+
+            <BookFlowPricing />
 
             <section className="border-t border-[var(--line)] pt-7">
               <h2 className="text-lg">Comment on travaille</h2>

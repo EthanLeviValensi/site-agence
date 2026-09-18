@@ -5,6 +5,7 @@ import Creations from "@/components/Creations";
 import KdsDemo from "@/components/KdsDemo";
 import EcommerceDemo from "@/components/EcommerceDemo";
 import Hosting from "@/components/Hosting";
+import BookFlowTeaser from "@/components/BookFlowTeaser";
 import ScratchTicket from "@/components/ScratchTicket";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -19,6 +20,7 @@ export default function Home() {
         <Creations />
         <KdsDemo />
         <EcommerceDemo />
+        <BookFlowTeaser />
         <Hosting />
         <ScratchTicket />
         <Contact />
