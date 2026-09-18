@@ -4,7 +4,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import { useState } from "react";
 
 // Les quatre formules réelles de BookFlow (catalogue `plans` côté API). Le
-// texte parle en bénéfices, pas en options techniques : une esthéticienne
+// texte parle en bénéfices, pas en options techniques : un professionnel
 // choisit une offre parce qu'elle règle un problème, pas parce qu'elle coche
 // une case.
 type Tier = {
@@ -25,7 +25,7 @@ const OPTIONS = [
   {
     titre: "Paiement en ligne",
     texte:
-      "Vos clientes règlent au moment de réserver, et sont remboursées automatiquement si elles annulent dans le délai que vous fixez. Les fonds arrivent sur votre compte, 1,9 % + 0,25 € par règlement — notre prix coûtant.",
+      "Vos clients règlent au moment de réserver, et sont remboursés automatiquement s'ils annulent dans le délai que vous fixez. Les fonds arrivent sur votre compte, 1,9 % + 0,25 € par règlement — notre prix coûtant.",
   },
   {
     titre: "Facturation automatique",
@@ -48,7 +48,7 @@ const TIERS: Tier[] = [
       "Réservation en ligne sur votre site",
       "Confirmations et rappels automatiques",
       "Empreinte bancaire contre les absences",
-      "Fiches clientes et historique",
+      "Fiches clients et historique",
       "Codes promo",
     ],
   },
@@ -63,11 +63,11 @@ const TIERS: Tier[] = [
     extra: "0,08 € le rendez-vous · 0,09 € le SMS",
     features: [
       "Tout ce que contient Solo",
-      "Praticiennes illimitées, agendas séparés",
-      "La cliente choisit avec qui",
+      "Praticiens illimités, agendas séparés",
+      "Le client choisit avec qui",
       "Comptes salariés et droits par personne",
       "Liste d'attente sur les créneaux pleins",
-      "Vos fidèles dispensées d'empreinte",
+      "Vos habitués dispensés d'empreinte",
     ],
   },
   {
@@ -122,7 +122,7 @@ export default function BookFlowPricing() {
           Une seule ligne sur votre facture. <span className="accent-serif gradient-text">Zéro commission sur vos soins.</span>
         </h2>
         <p className="mt-5 max-w-xl text-[15px] leading-relaxed text-[var(--text-dim)]">
-          Pas de pourcentage sur votre chiffre d&apos;affaires, pas de commission sur les clientes que
+          Pas de pourcentage sur votre chiffre d&apos;affaires, pas de commission sur les clients que
           vous avez mis des années à fidéliser. Un abonnement mensuel, sans engagement, et
           l&apos;hébergement de votre site compris.
         </p>
@@ -267,6 +267,60 @@ export default function BookFlowPricing() {
       </motion.div>
 
       <motion.div
+        initial={reduce ? false : { opacity: 0, y: 16 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-60px" }}
+        transition={{ duration: 0.5 }}
+        className="mt-8 overflow-hidden rounded-2xl border p-6"
+        style={{ borderColor: "var(--violet-soft)", background: "var(--surface)" }}
+      >
+        <div className="relative">
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -right-16 -top-20 h-48 w-48 rounded-full opacity-20 blur-3xl"
+            style={{ background: "var(--grad-signature)" }}
+          />
+          <h3 className="relative text-lg">
+            Chaque fonction s&apos;allume ou s&apos;éteint. <span className="accent-serif gradient-text">La formule ne change pas.</span>
+          </h3>
+          <p className="relative mt-3 max-w-2xl text-[14px] leading-relaxed text-[var(--text-dim)]">
+            Rien n&apos;est imposé. Vous décidez, depuis votre espace, si le client choisit son
+            praticien, s&apos;il peut payer en ligne ou sur place, si une empreinte bancaire est
+            demandée et sur quelles prestations, si les rappels partent par SMS, par email ou pas du
+            tout, si vous validez chaque rendez-vous à la main, quel délai d&apos;annulation vous
+            accordez, quel temps de battement séparer deux rendez-vous. Tout se règle en deux clics,
+            et se change quand vous voulez — sans nous appeler et sans changer de formule.
+          </p>
+          <div className="relative mt-5 flex flex-wrap gap-2">
+            {[
+              "Choix du praticien",
+              "Paiement en ligne",
+              "Empreinte bancaire",
+              "Rappels SMS",
+              "Rappels email",
+              "Validation manuelle",
+              "Liste d'attente",
+              "Codes promo",
+              "Délai d'annulation",
+              "Temps de battement",
+            ].map((label, i) => (
+              <motion.span
+                key={label}
+                initial={reduce ? false : { opacity: 0, scale: 0.94 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.3, delay: reduce ? 0 : i * 0.04 }}
+                className="rounded-full border px-3 py-1.5 text-[12px] text-[var(--text-dim)]"
+                style={{ borderColor: "var(--line)" }}
+              >
+                {label}
+              </motion.span>
+            ))}
+          </div>
+        </div>
+      </motion.div>
+
+      <motion.div
         initial={reduce ? false : { opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
@@ -280,7 +334,7 @@ export default function BookFlowPricing() {
             "L'hébergement de votre site et ses mises à jour",
             "Vos données sauvegardées toutes les heures, en deux pays",
             "Les paiements versés sur votre compte, jamais sur le nôtre",
-            "Vos clientes vous appartiennent : aucune place de marché",
+            "Vos clients vous appartiennent : aucune place de marché",
             "Sans engagement : vous partez quand vous voulez, avec vos données",
             "Une vraie personne au bout du fil, pas un formulaire",
           ].map((line) => (

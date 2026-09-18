@@ -28,17 +28,17 @@ const CAPACITES = [
   {
     titre: "Les oublis en moins",
     texte:
-      "Confirmation par email ou SMS, rappel la veille et le matin même, message automatique en cas de déplacement ou d'annulation. Vos clientes se présentent, vous ne passez plus la journée au téléphone.",
+      "Confirmation par email ou SMS, rappel la veille et le matin même, message automatique en cas de déplacement ou d'annulation. Vos clients se présentent, vous ne passez plus la journée au téléphone.",
   },
   {
     titre: "Les absences, enfin prises au sérieux",
     texte:
-      "Empreinte bancaire à la réservation, montant que vous fixez par prestation, débité seulement si la personne ne vient pas. Vos habituées en sont dispensées automatiquement.",
+      "Empreinte bancaire à la réservation, montant que vous fixez par prestation, débité seulement si la personne ne vient pas. Vos habitués en sont dispensés automatiquement.",
   },
   {
     titre: "Payé d'avance, remboursé sans y penser",
     texte:
-      "Vous pouvez demander le règlement au moment de la réservation. Si la cliente annule dans le délai que vous avez choisi, elle est remboursée automatiquement — sans que vous ayez à intervenir.",
+      "Vous pouvez demander le règlement au moment de la réservation. Si le client annule dans le délai que vous avez choisi, il est remboursé automatiquement — sans que vous ayez à intervenir.",
   },
 ];
 
@@ -55,7 +55,7 @@ export default function BookFlowPage() {
           <p className="mt-6 max-w-xl text-[15px] leading-relaxed text-[var(--text-dim)]">
             BookFlow est notre logiciel de réservation pour les instituts de beauté, les salons et les
             restaurants. Il s&apos;installe dans le site que nous construisons pour vous — pas sur une
-            plateforme où vos clientes verraient d&apos;abord vos concurrents — et il va jusqu&apos;au
+            plateforme où vos clients verraient d&apos;abord vos concurrents — et il va jusqu&apos;au
             bout : de la prise de rendez-vous à la facture déposée dans votre comptabilité.
           </p>
 
@@ -115,7 +115,7 @@ export default function BookFlowPage() {
               <h2 className="text-lg">L&apos;argent va chez vous, directement</h2>
               <p className="mt-3 text-[14px] leading-relaxed text-[var(--text-dim)]">
                 Les paiements en ligne et les absences facturées arrivent sur votre propre compte
-                Stripe, pas sur le nôtre. Vos données clientes vous appartiennent : elles restent
+                Stripe, pas sur le nôtre. Vos données clients vous appartiennent : elles restent
                 cloisonnées, exportables, et supprimées de nos serveurs si vous partez. Notre travail
                 est de faire tourner le logiciel, pas de s&apos;installer entre vous et votre
                 clientèle.

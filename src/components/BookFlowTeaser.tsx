@@ -27,7 +27,7 @@ export default function BookFlowTeaser() {
             <p className="mt-5 max-w-lg text-[15px] leading-relaxed text-[var(--text-dim)]">
               Réservation en ligne sur votre propre site, rappels automatiques, empreinte bancaire
               contre les absences, paiement d&apos;avance et facture déposée dans votre comptabilité.
-              Pas de place de marché, pas de commission sur vos soins : vos clientes restent les
+              Pas de place de marché, pas de commission sur vos prestations : vos clients restent les
               vôtres.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
