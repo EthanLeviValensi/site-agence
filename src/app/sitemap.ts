@@ -3,7 +3,7 @@ import type { MetadataRoute } from "next";
 const BASE_URL = "https://synergysolutions.fr";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const routes = ["", "/bookflow", "/sauvegardes", "/mentions-legales", "/confidentialite", "/cgv"];
+  const routes = ["", "/bookflow", "/bookflow/conditions", "/sauvegardes", "/mentions-legales", "/confidentialite", "/cgv"];
 
   return routes.map((route) => ({
     url: `${BASE_URL}${route}`,

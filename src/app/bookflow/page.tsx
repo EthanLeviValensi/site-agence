@@ -143,8 +143,8 @@ export default function BookFlowPage() {
               Confidentialité
             </a>{" "}
             ·{" "}
-            <a href="/cgv" className="text-[var(--cyan)] hover:underline">
-              Conditions d&apos;utilisation
+            <a href="/bookflow/conditions" className="text-[var(--cyan)] hover:underline">
+              Conditions du service
             </a>{" "}
             ·{" "}
             <a href="/mentions-legales" className="text-[var(--cyan)] hover:underline">
