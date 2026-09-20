@@ -35,6 +35,9 @@ export default function Hero() {
               Voir une démo
             </a>
           </div>
+          <p className="mono-tag mt-6 text-[10px] text-[var(--text-faint)]">
+            Agence basée à Lançon-Provence · Bouches-du-Rhône
+          </p>
         </div>
 
         <CodeMorph />

@@ -42,9 +42,26 @@ const CAPACITES = [
   },
 ];
 
+const BOOKFLOW_JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "BookFlow",
+  applicationCategory: "BusinessApplication",
+  operatingSystem: "Web",
+  description:
+    "Logiciel de réservation en ligne pour instituts et restaurants : agenda, rappels SMS, empreinte bancaire, paiement en ligne, encaissement et facture automatique.",
+  url: "https://synergysolutions.fr/bookflow",
+  inLanguage: "fr-FR",
+  provider: { "@id": "https://synergysolutions.fr/#organization" },
+};
+
 export default function BookFlowPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(BOOKFLOW_JSON_LD) }}
+      />
       <Nav />
       <main className="flex-1 pb-28 pt-40 md:pt-48">
         <div className="mx-auto max-w-3xl px-6">

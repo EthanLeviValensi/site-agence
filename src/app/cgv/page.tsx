@@ -3,6 +3,8 @@ import LegalPage, { LegalSection } from "@/components/LegalPage";
 
 export const metadata: Metadata = {
   title: "Conditions générales de vente — Synergy Solutions",
+  description:
+    "Devis, acompte, délais, hébergement, maintenance, données personnelles et résiliation : les conditions générales de vente de Synergy Solutions.",
 };
 
 export default function Cgv() {

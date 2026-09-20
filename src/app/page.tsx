@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
@@ -9,6 +10,18 @@ import BookFlowTeaser from "@/components/BookFlowTeaser";
 import ScratchTicket from "@/components/ScratchTicket";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+
+export const metadata: Metadata = {
+  openGraph: {
+    type: "website",
+    locale: "fr_FR",
+    siteName: "Synergy Solutions",
+    url: "/",
+    title: "Synergy Solutions — Logiciels sur mesure : e-commerce, KDS, CRM",
+    description:
+      "Agence de développement sur mesure : e-commerce, écrans de cuisine (KDS), sites vitrines, CRM. 100 % codé, zéro WordPress, zéro module payant.",
+  },
+};
 
 export default function Home() {
   return (

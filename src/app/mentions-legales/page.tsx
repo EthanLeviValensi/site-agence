@@ -3,6 +3,8 @@ import LegalPage, { LegalSection } from "@/components/LegalPage";
 
 export const metadata: Metadata = {
   title: "Mentions légales — Synergy Solutions",
+  description:
+    "Éditeur du site, hébergeur, directeur de la publication et informations légales de Synergy Solutions, entreprise individuelle basée à Lançon-Provence.",
 };
 
 export default function MentionsLegales() {

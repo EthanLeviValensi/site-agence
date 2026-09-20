@@ -9,6 +9,31 @@ const BOOKFLOW_ADMIN_URL = process.env.BOOKFLOW_ADMIN_URL || "https://admin-book
 const TENANT_SLUG = process.env.BOOKFLOW_TENANT_SLUG?.trim();
 
 const nextConfig: NextConfig = {
+  poweredByHeader: false,
+  // Une seule adresse pour le site : www renvoie en 308 (permanent) vers l'apex,
+  // pour éviter deux versions indexables du même contenu.
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.synergysolutions.fr" }],
+        destination: "https://synergysolutions.fr/:path*",
+        permanent: true,
+      },
+    ];
+  },
+  async headers() {
+    return [
+      {
+        source: "/:path*",
+        headers: [
+          { key: "Strict-Transport-Security", value: "max-age=31536000" },
+          { key: "X-Content-Type-Options", value: "nosniff" },
+          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+        ],
+      },
+    ];
+  },
   async rewrites() {
     if (!TENANT_SLUG || !/^[a-z0-9][a-z0-9-]{1,48}[a-z0-9]$/.test(TENANT_SLUG)) return [];
     return [
