@@ -23,11 +23,6 @@ type Tier = {
 
 const OPTIONS = [
   {
-    titre: "Paiement en ligne",
-    texte:
-      "Vos clients règlent au moment de réserver, et sont remboursés automatiquement s'ils annulent dans le délai que vous fixez. Les fonds arrivent sur votre compte, 1,9 % + 0,25 € par règlement — notre prix coûtant.",
-  },
-  {
     titre: "Facturation automatique",
     texte:
       "Chaque encaissement devient une facture dans votre propre compte Abby ou Pennylane, sous votre numérotation. Vous connectez votre logiciel en un clic, et vous le débranchez quand vous voulez.",
@@ -47,6 +42,7 @@ const TIERS: Tier[] = [
     features: [
       "Réservation en ligne sur votre site",
       "Confirmations et rappels automatiques",
+      "Paiement en ligne à la réservation",
       "Empreinte bancaire contre les absences",
       "Fiches clients et historique",
       "Codes promo",
@@ -83,7 +79,7 @@ const TIERS: Tier[] = [
     extra: "0,04 € le rendez-vous · 0,08 € le SMS",
     features: [
       "Tout ce que contient Institut",
-      "Les deux options comprises (valeur 10 €/mois)",
+      "Facturation automatique comprise (valeur 5 €/mois)",
       "Remboursement automatique à l'annulation",
     ],
   },
@@ -235,13 +231,14 @@ export default function BookFlowPricing() {
         transition={{ duration: 0.5 }}
         className="mt-8"
       >
-        <h3 className="text-lg">Les options</h3>
+        <h3 className="text-lg">L&apos;option</h3>
         <p className="mt-2 max-w-xl text-[14px] leading-relaxed text-[var(--text-dim)]">
-          Deux modules qui se règlent 5 € par mois chacun sur Solo et Institut, et{" "}
-          <span className="text-[var(--cyan)]">compris sans supplément dès Premium</span>.
+          Un seul module en supplément, 5 € par mois sur Solo et Institut, et{" "}
+          <span className="text-[var(--cyan)]">compris sans supplément dès Premium</span>. Le
+          paiement en ligne, lui, est dans toutes les formules — <span className="text-[var(--cyan)]">y compris Solo</span>.
         </p>
 
-        <div className="mt-5 grid gap-4 sm:grid-cols-2">
+        <div className="mt-5 grid gap-4 sm:max-w-md">
           {OPTIONS.map((option, i) => (
             <motion.div
               key={option.titre}

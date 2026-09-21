@@ -4,3 +4,9 @@ node_modules
 .DS_Store
 *.log
 graphify-out
+
+# Artefact de compilation TypeScript : genere a chaque build, jamais versionne.
+# Committe par erreur le 21/09/2026, il a casse le deploiement Coolify qui
+# monte un cache a cet emplacement (impossible de monter un dossier sur un
+# fichier).
+tsconfig.tsbuildinfo

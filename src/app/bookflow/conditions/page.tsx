@@ -33,9 +33,10 @@ export default function ConditionsBookFlow() {
           précisé dans la formule souscrite.
         </p>
         <p>
-          Les options — paiement en ligne, facturation électronique automatique — sont incluses dans
-          les formules Premium et Pro, et facturées 5 € par mois et par option dans les autres
-          formules.
+          Le <strong>paiement en ligne est compris dans toutes les formules</strong>, Solo incluse,
+          sans supplément d&apos;abonnement. Une seule option reste facturée à part — la facturation
+          électronique automatique — à 5 € par mois sur les formules Solo et Institut ; elle est
+          comprise dans les formules Premium et Pro.
         </p>
       </LegalSection>
 
