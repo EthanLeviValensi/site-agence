@@ -103,10 +103,10 @@ export default function ConditionsBookFlow() {
           l&apos;établissement.
         </p>
         <p>
-          Sur une absence effectivement facturée, une commission de <strong>25 %</strong> du montant
-          prélevé revient à Synergy Solutions (10 % pour les formules restauration),{" "}
-          <strong>plafonnée à 10 € par absence</strong>. Le solde est reversé à l&apos;établissement.
-          Le taux applicable est celui en vigueur au moment où l&apos;empreinte a été enregistrée.
+          <strong>Aucune commission n&apos;est prélevée sur une absence facturée.</strong>{" "}
+          L&apos;intégralité du montant encaissé revient à l&apos;établissement, déduction faite des
+          seuls frais de Stripe sur la transaction. Une absence est déjà une perte : Synergy
+          Solutions ne s&apos;y sert pas.
         </p>
       </LegalSection>
 
