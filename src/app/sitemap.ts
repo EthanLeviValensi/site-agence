@@ -10,6 +10,7 @@ const PAGES: { path: string; lastModified: string }[] = [
   { path: "/creations", lastModified: "2026-08-23" },
   { path: "/bookflow", lastModified: "2026-09-18" },
   { path: "/bookflow/conditions", lastModified: "2026-09-18" },
+  { path: "/bookflow/confidentialite", lastModified: "2026-09-23" },
   { path: "/sauvegardes", lastModified: "2026-07-07" },
   { path: "/confidentialite", lastModified: "2026-09-18" },
   { path: "/cgv", lastModified: "2026-07-16" },
