@@ -49,6 +49,13 @@ export default function Confidentialite() {
           partent directement depuis votre propre client de messagerie, et servent uniquement à
           répondre à votre demande.
         </p>
+        <p>
+          <strong>Publicités Facebook et Instagram.</strong> Si vous remplissez le formulaire
+          d&apos;une de nos publicités, Meta nous transmet ce que vous y avez saisi : prénom, nom de
+          votre établissement, téléphone et ville. Ces informations servent uniquement à vous
+          rappeler pour vous présenter nos services, à votre demande. Elles ne sont ni revendues, ni
+          utilisées pour vous envoyer de la publicité.
+        </p>
       </LegalSection>
 
       <LegalSection title="2. Nos clients professionnels">
@@ -105,6 +112,9 @@ export default function Confidentialite() {
           <br />
           <strong>Outils internes de gestion</strong> — Vercel et Supabase, pour notre suivi
           commercial et notre facturation.
+          <br />
+          <strong>Publicités et formulaires de contact</strong> — Meta Platforms Ireland (Facebook,
+          Instagram), uniquement pour les demandes envoyées depuis nos publicités.
         </p>
         <p>
           Certains de ces prestataires peuvent traiter des données hors de l&apos;Union européenne.
@@ -117,6 +127,9 @@ export default function Confidentialite() {
         <p>
           <strong>Demandes de contact</strong> — le temps du traitement, puis la durée de la relation
           commerciale éventuelle.
+          <br />
+          <strong>Demandes reçues via nos publicités</strong> — trois ans après notre dernier
+          échange, si elles n&apos;aboutissent pas à un contrat.
           <br />
           <strong>Données traitées pour un client (BookFlow, hébergement)</strong> — pendant toute la
           durée du contrat. À son terme, elles sont restituées à l&apos;établissement puis supprimées
